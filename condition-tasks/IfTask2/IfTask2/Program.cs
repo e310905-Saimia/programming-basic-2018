@@ -6,9 +6,7 @@ namespace IfTask2
     {
         static void Main(string[] args)
         {
-            //Tänne tehdään ohjelmointi tehtävä
-            //Muista välitalletukset CTRL + S
-            //Muista myös Commit ja kommentit koodimuutoksista
+            Console.WriteLine("Hello World!");
         }
     }
 }
