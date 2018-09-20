@@ -20,9 +20,9 @@ namespace IfTask2
                     Console.WriteLine($"Luku {number} on pariton.");
             }
             else
+            {
                 Console.WriteLine("Väärä syöte! ");
-
-
+            }
         }
     }
 }
