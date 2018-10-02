@@ -14,11 +14,21 @@ namespace LoopTask4._1
 
             Console.WriteLine("Ohjelma tulostaa 10 arvottua kokonaislukua ja niiden neliöjuuret.");
             Console.WriteLine("#\tRND\tSQRT");
-            for (int i = 0; i < 10; i++)
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    rndNumber = rnd.Next(2, 10);
+            //    Console.WriteLine($"{i + 1}.\t{rndNumber}\t{Math.Sqrt(rndNumber)}");
+            //}
+
+            int i = 0;
+            while (i<10)
             {
-                rndNumber = rnd.Next(2,10);
-                Console.WriteLine($"{i+1}.\t{rndNumber}\t{Math.Sqrt(rndNumber)}");
+                rndNumber = rnd.Next(2, 10);
+                Console.WriteLine($"{i + 1}.\t{rndNumber}\t{Math.Sqrt(rndNumber)}");
+                i = i + 1; //i++
             }
+
+
         }
     }
 }
