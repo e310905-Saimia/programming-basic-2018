@@ -8,10 +8,7 @@ namespace LoopTask4._1
         {
             Random rnd = new Random();
             int rndNumber;
-
-            
-            //rnd.NextDouble();
-
+                     
             Console.WriteLine("Ohjelma tulostaa 10 arvottua kokonaislukua ja niiden neliöjuuret.");
             Console.WriteLine("#\tRND\tSQRT");
             #region for example
@@ -33,7 +30,9 @@ namespace LoopTask4._1
             do
             {
                 rndNumber = rnd.Next(2, 10);
-                Console.WriteLine($"{i + 1}.\t{rndNumber}\t{Math.Sqrt(rndNumber)}");
+                Console.WriteLine($"{i + 1}.\t" +
+                    $"{rndNumber}\t" +
+                    $"{Math.Sqrt(rndNumber)}");
                 i = i + 1; //i++
             } while (i < 10);
 
