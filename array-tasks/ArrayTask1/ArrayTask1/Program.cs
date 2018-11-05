@@ -7,11 +7,13 @@ namespace ArrayTask1
     {
         static void Main(string[] args)
         {
-            CultureInfo culture = new CultureInfo("sv-SV");
-            CultureInfo.CurrentCulture = culture;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            //CultureInfo culture = new CultureInfo("sv-SV");
+            CultureInfo.CurrentCulture = new CultureInfo("sv-SV");
             Console.WriteLine(DateTime.Now);
 
-            culture = new CultureInfo("fi-FI");
+            var culture = new CultureInfo("fi-FI");
             CultureInfo.CurrentCulture = culture;
             Console.WriteLine(DateTime.Now);
 
@@ -19,7 +21,6 @@ namespace ArrayTask1
             CultureInfo.CurrentCulture = culture;
             Console.WriteLine(DateTime.Now);
 
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("Hinnasto");
             
             
