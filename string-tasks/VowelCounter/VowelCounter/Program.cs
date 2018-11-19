@@ -19,14 +19,25 @@ namespace VowelCounter
         }
 
         static string VowelsRemove(string d)
-        {         
+        {
+            string vowels = "AEIOUYÄÖ";
+
             for (int i = 0; i < d.Length; i++)
             {
-                if (d[i] == 'A' || d[i] == 'E' || d[i] == 'I' || d[i] == 'O' || d[i] == 'U' || d[i] == 'Y' || d[i] == 'Ä' || d[i] == 'Ö')
+                for (int j = 0; j < vowels.Length; j++)
                 {
-                    d = d.Remove(i, 1);
-                    i--;
+                    if (d[i] == vowels[j])
+                    {
+                        d = d.Remove(i, 1);
+                        i--;
+                        break;
+                    }
                 }
+                //if (d[i] == 'A' || d[i] == 'E' || d[i]=='I' || d[i] == 'O' || d[i] == 'U' || d[i] == 'Y' || d[i] == 'Ä' || d[i] == 'Ö')
+                //{                    
+                //    d = d.Remove(i, 1);
+                //    i--;
+                //}
             }
             return d;
         }
