@@ -18,6 +18,24 @@ namespace VowelCounter
             return Console.ReadLine().ToUpper();
         }
 
+        static int VowelCounter(string d)
+        {
+            string vowels = "AEIOUYÄÖ";
+            int vowelCounter = 0;
+            for (int i = 0; i < d.Length; i++)
+            {
+                for (int j = 0; j < vowels.Length; j++)
+                {
+                    if(d[i] == vowels[i])
+                    {
+                        vowelCounter++;
+                        break;
+                    }
+                }
+            }
+            return vowelCounter;
+        }
+
         static string VowelsRemove(string d)
         {
             string vowels = "AEIOUYÄÖ";
