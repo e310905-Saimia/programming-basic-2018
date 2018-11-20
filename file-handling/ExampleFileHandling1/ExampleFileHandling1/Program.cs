@@ -44,6 +44,11 @@ namespace ExampleFileHandling1
 
         }
 
+
+        /// <summary>
+        /// User Interface
+        /// </summary>
+        /// <returns></returns>
         static string UserInterface()
         {
             Console.WriteLine("Tiedoston käsittely esimerkki!");
@@ -58,46 +63,53 @@ namespace ExampleFileHandling1
         }
 
         /// <summary>
-        /// Write to file
-        /// Create new file
+        /// Write to file by using StreamWriter Class
+        /// Create a new file
         /// string filePath is 
         /// </summary>
         /// <param name="filePath"></param>
         static void WriteToFile(string filePath)
         {
-            StreamWriter R = new StreamWriter(filePath);
-            R.WriteLine("TERVE TAAS!");
-            R.WriteLine(DateTime.Now.ToString());
-            R.WriteLine($"Tiedoston sijainti on: \t\t{filePath}");
-            R.Close();
-        }
-
-        static void ReadFile(string filePath)
-        {
-            StreamReader R = new StreamReader(filePath);
-            string strRow = null;
-
-            Console.WriteLine("Tiedostosta löytyy seuraavat rivit:\n");
-            while ((strRow = R.ReadLine()) != null)
+            using (StreamWriter sw = new StreamWriter(filePath))
             {
-                Console.WriteLine(strRow);
+                sw.WriteLine("TERVE TAAS!");
+                sw.WriteLine(DateTime.Now.ToString());
+                sw.WriteLine($"Tiedoston sijainti on: \t\t{filePath}");
             }
-
-            R.Close();
         }
 
         /// <summary>
-        /// Append data to end of file
+        /// Read file by using StreamReader class
+        /// </summary>
+        /// <param name="filePath"></param>
+        static void ReadFile(string filePath)
+        {
+            using (StreamReader sr = new StreamReader(filePath))
+            {
+                string line = null;
+
+                Console.WriteLine("Tiedostosta löytyy seuraavat rivit:\n");
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// Append data to end of file by using StreamWriter Class
         /// </summary>
         /// <param name="filePath"></param>
         static void AddDataToFile(string filePath)
         {
-            StreamWriter R = new StreamWriter(filePath, true);
-            R.WriteLine("-----------------------------------------");
-            R.WriteLine("TERVE TAAS!");
-            R.WriteLine(DateTime.Now.ToString());
-            R.WriteLine("Tiedoston sijainti on: \t\t{0}", filePath);
-            R.Close();
+            using (StreamWriter sw = new StreamWriter(filePath,true))
+            {
+                sw.WriteLine("-----------------------------------------");
+                sw.WriteLine("TERVE TAAS - tässä lisätään rivit tiedoston loppuun!");
+                sw.WriteLine(DateTime.Now.ToString());
+                sw.WriteLine("Tiedoston sijainti on: \t\t{0}", filePath);
+            }
         }
     }
 }
