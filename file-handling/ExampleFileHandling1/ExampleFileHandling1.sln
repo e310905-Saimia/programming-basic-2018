@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleFileHandling1", "ExampleFileHandling1\ExampleFileHandling1.csproj", "{0C581FCF-2E7B-4343-844A-1937E901BFD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleFileClass", "ExampleFileClass\ExampleFileClass.csproj", "{A1BBF59D-40A2-4D7C-9B42-710A2690AA5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0C581FCF-2E7B-4343-844A-1937E901BFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C581FCF-2E7B-4343-844A-1937E901BFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C581FCF-2E7B-4343-844A-1937E901BFD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1BBF59D-40A2-4D7C-9B42-710A2690AA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1BBF59D-40A2-4D7C-9B42-710A2690AA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1BBF59D-40A2-4D7C-9B42-710A2690AA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1BBF59D-40A2-4D7C-9B42-710A2690AA5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
