@@ -9,6 +9,7 @@ namespace ExampleFileHandling1
         {
             string choise = null;
             string path = @"C:\TEMP\TESTI.DAT";
+            //string path = "C:\\TEMP\\TESTI.DAT";
             string msg = "";
             do
             {
@@ -74,7 +75,7 @@ namespace ExampleFileHandling1
             {
                 sw.WriteLine("TERVE TAAS!");
                 sw.WriteLine(DateTime.Now.ToString());
-                sw.WriteLine($"Tiedoston sijainti on: \t\t{filePath}");
+                sw.WriteLine($"Tiedoston sijainti on: \t\t{filePath}");        
             }
         }
 
@@ -84,16 +85,22 @@ namespace ExampleFileHandling1
         /// <param name="filePath"></param>
         static void ReadFile(string filePath)
         {
-            using (StreamReader sr = new StreamReader(filePath))
+            try
             {
-                string line = null;
-
-                Console.WriteLine("Tiedostosta löytyy seuraavat rivit:\n");
-                while ((line = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader(filePath))
                 {
-                    Console.WriteLine(line);
-                }
+                    string line = null;
 
+                    Console.WriteLine("Tiedostosta löytyy seuraavat rivit:\n");
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Tapahtui virhe: {ex.Message}");
             }
         }
 
