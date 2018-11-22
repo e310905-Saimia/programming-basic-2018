@@ -11,7 +11,8 @@ namespace SelfEvaluateTask1
 
             for (int i = 0; i < numbers.Length; i++)
             {
-                PrintStars(numbers[i]);
+                Console.WriteLine(GetStars(numbers[i]));
+                //PrintStars(numbers[i]);
             }
             //PrintStars(numbers[0]);
             //PrintStars(numbers[1]);
@@ -33,6 +34,23 @@ namespace SelfEvaluateTask1
                 Console.Write("*");
             }
             Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Palauttaa tähtien määrän.
+        /// length = tähtien määrä
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        static string GetStars(int length)
+        {
+            string returnStars = "";
+            for (int i = 0; i < length; i++)
+            {
+                returnStars += "* ";
+                //returnStars = $"{returnStars}*"; 
+            }
+            return returnStars;
         }
     }
 }
