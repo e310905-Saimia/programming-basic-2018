@@ -6,19 +6,15 @@ namespace SelfEvaluateTask1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Tulostaa tähtiä.");
+            Console.WriteLine("Tulostaa tähtiä. Ohjelman suoritus alkaa 3 sekunnin kuluttua.");
+            Delay();
             int[] numbers = new int[] { 2, 5, 10, 7, 3 };
 
             for (int i = 0; i < numbers.Length; i++)
             {
                 Console.WriteLine(GetStars(numbers[i]));
                 //PrintStars(numbers[i]);
-            }
-            //PrintStars(numbers[0]);
-            //PrintStars(numbers[1]);
-            //PrintStars(numbers[2]);
-            //PrintStars(numbers[3]);
-            //PrintStars(numbers[4]);
+            }           
         }
 
 
@@ -47,10 +43,20 @@ namespace SelfEvaluateTask1
             string returnStars = "";
             for (int i = 0; i < length; i++)
             {
-                returnStars += "* ";
+                returnStars += "*";
                 //returnStars = $"{returnStars}*"; 
             }
             return returnStars;
+        }
+
+        static void Delay()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write(".");
+                System.Threading.Thread.Sleep(1000);
+            }
+            Console.WriteLine();
         }
     }
 }
